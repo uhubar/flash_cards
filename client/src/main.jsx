@@ -6,7 +6,8 @@ import Root from "./Root";
 import App from "./App";
 import OneTheme from "./OneTheme";
 import LoginPage from "./LoginPage";
-import RegPage from "./RegPage";
+import RegPage from "./Pages/RegPage";
+import ThemesPage from "./Pages/ThemesPage";
 const data = ["Questions",
         {
           question: "Почему JavaScript не может найти свою кофейную кружку?",
@@ -174,7 +175,11 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: "/theme",
+        path: "/themes",
+        element: <ThemesPage/>,
+      },
+      {
+        path: "/theme/:id",
         element: <OneTheme theme={data}/>,
       },
       {
