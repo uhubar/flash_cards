@@ -1,15 +1,12 @@
 import * as React from "react";
 import { createRoot } from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Root from "./Root";
 import App from "./App";
-import Theme from "./Theme";
+import OneTheme from "./OneTheme";
+import LoginPage from "./LoginPage";
+import RegPage from "./RegPage";
 const data = ["Questions",
         {
           question: "Почему JavaScript не может найти свою кофейную кружку?",
@@ -177,8 +174,16 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: "/theme/:id",
-        element: <Theme posts={data}/>,
+        path: "/theme",
+        element: <OneTheme theme={data}/>,
+      },
+      {
+        path: "/login",
+        element: <LoginPage />,
+      },
+      {
+        path: "/reg",
+        element: <RegPage />,
       },
     ],
   },

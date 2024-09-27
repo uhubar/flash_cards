@@ -13,7 +13,6 @@ function App() {
       <Button name="Theme 2" color="yellow" />
       <Button name="Theme 3" color="yellow" />
       <div className="card">
-
       </div>
     </>
   );
