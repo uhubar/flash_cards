@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
 
 const data = ["Questions",
   {
@@ -183,6 +181,11 @@ const data = ["Questions",
     ThemeId: 3,
   }
 ];
+
+
+import React, { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
+
 function OneTheme({ theme }) {
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [userAnswer, setUserAnswer] = useState('');
@@ -240,8 +243,8 @@ function OneTheme({ theme }) {
 
   return (
     <div>
-      <h1>Тема {themeId}</h1>
-      <h2>Вопрос: {currentQuestion.question}</h2>
+      <h1>Тема {themeId}:</h1>
+      <h2>{currentQuestion.question}</h2>
       <label>Ответ:</label>
       <input type="text" value={userAnswer} onChange={handleAnswerChange} />
       <button onClick={handleSubmit}>Подтвердить</button>

@@ -6,7 +6,7 @@ function Root() {
     <>
       <nav>
         <div>
-          <ul>
+          <ul style={{display: 'flex', gap: '220px', paddingBottom: '25vh'}}>
             <li>
               <Link to={"/"}>Main Page</Link>
             </li>
