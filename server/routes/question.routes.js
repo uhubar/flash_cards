@@ -12,7 +12,7 @@ questionRouter.get('/', async(req, res) => {
     }
 });
 
-
+//ghbdtnnjfsajbfdjhsadbjhfdshjfewjhwefjhwefjh
 questionRouter.get('/:ThemeId/:id', async(req, res) => {
     const {id, ThemeId} = req.params;
     try {
