@@ -244,7 +244,7 @@ function OneTheme({ theme }) {
       <h2>{currentQuestion.question}</h2>
       <label>Ответ:</label>
       <input type="text" value={userAnswer} onChange={handleAnswerChange} />
-      <button onClick={handleSubmit}>Submit</button>
+      <button onClick={handleSubmit}>Подтвердить</button>
       {result !== null && (
         <p>
           {result ? 'Правильно!' : 'Неправильно.'}
