@@ -167,9 +167,11 @@ function App() {
       <div>
       </div>
       <h1>Quiz</h1>
-      <Link to={"/theme/1"}><Button name="Theme 1" color="yellow" /></Link>
-      <Link to={"/theme/2"}><Button name="Theme 2" color="yellow" /></Link>
-      <Link to={"/theme/3"}><Button name="Theme 3" color="yellow" /></Link>
+
+      <Link to={"/theme/1"}><Button name="Theme 1" color="#9400d3" /></Link>
+      <Link to={"/theme/2"}><Button name="Theme 2" color="#9400d3" /></Link>
+      <Link to={"/theme/3"}><Button name="Theme 3" color="#9400d3" /></Link>
+
       <div className="card">
       </div>
     </> 
