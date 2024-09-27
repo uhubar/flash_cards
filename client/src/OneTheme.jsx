@@ -1,3 +1,4 @@
+
 const data = ["Questions",
   {
     id: 1,
@@ -181,8 +182,10 @@ const data = ["Questions",
   }
 ];
 
+
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
+
 function OneTheme({ theme }) {
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [userAnswer, setUserAnswer] = useState('');
