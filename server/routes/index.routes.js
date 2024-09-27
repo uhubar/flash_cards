@@ -1,9 +1,12 @@
 const indexRouter = require("express").Router();
 
-const categoryRouter = require("./postCategories.routes");
 const authRouter = require("./auth.routes");
+const questionRouter = require("./question.routes");
+const themeRouter = require("./theme.routes");
 
-indexRouter.use("/categories", categoryRouter);
 indexRouter.use("/auth", authRouter);
+indexRouter.use("/themes", themeRouter);
+indexRouter.use("/themes/questions", questionRouter)
+
 
 module.exports = indexRouter;

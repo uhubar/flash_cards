@@ -8,13 +8,13 @@ const serverConfig = require("./config/serverConfig");
 serverConfig(app);
 app.use("/api", indexRouter);
 
-const { Post } = require("./db/models");
+const { Question } = require("./db/models");
 
 app.get("/", async (req, res) => {
-  const posts = await Post.findAll({
-    include: ["PostCategory", "User"],
+  const questions = await Question.findAll({
+    include: ["Theme"],
   });
-  res.json({ posts });
+  res.json({ questions });
 });
 
 app.listen(process.env.PORT, () => {
