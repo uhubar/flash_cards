@@ -1,5 +1,5 @@
-// import React from "react";
-// import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
 
 const data = ["Questions",
   {
@@ -183,29 +183,6 @@ const data = ["Questions",
     ThemeId: 3,
   }
 ];
-// function OneTheme({theme}) {
- 
-//   const { id } = useParams();
-// console.log( id)
-//   const myTheme = theme.filter((el) => el.ThemeId === Number(id));
-//   console.log(myTheme)
-
-//   return (
-//     <div>
-//     {myTheme.map((el) => (
-//       <div key={el.ThemeId}>
-//         <h1>{el.question}</h1>
-//         <p>{el.response}</p>  
-//       </div>
-//     ))}
-//     </div>
-//   );
-// }
-
-// export default OneTheme;
-
-import React, { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
 function OneTheme({ theme }) {
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [userAnswer, setUserAnswer] = useState('');
@@ -267,7 +244,7 @@ function OneTheme({ theme }) {
       <h2>Вопрос: {currentQuestion.question}</h2>
       <label>Ответ:</label>
       <input type="text" value={userAnswer} onChange={handleAnswerChange} />
-      <button onClick={handleSubmit}>Submit</button>
+      <button onClick={handleSubmit}>Подтвердить</button>
       {result !== null && (
         <p>
           {result ? 'Правильно!' : 'Неправильно.'}
