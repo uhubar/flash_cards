@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="POST" action="/formsubmit">
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        Password
+        <input type="password" name="password" minlength="6" required />
+      </label>
+
+      <button type="submit">Отправить</button>
+    </form>
+    <div id="u"></div>
+  </body>
+  <script>
+    const div = document.getElementById("u");
+    console.log(div);
+
+    fetch("http://localhost:3000/users")
+      .then((data) => data.json())
+      .then((data) => {
+        data.users.map((el) => {
+          div.append(`<b>${el.email} </b>`);
+        });
+      });
+  </script>
+</html>
