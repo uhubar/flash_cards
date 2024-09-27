@@ -12,4 +12,4 @@ class ThemeService {
     }
 }
 
-module.exports = ThemeService;
+module.exports = ThemeService
