@@ -11,7 +11,7 @@ function Root() {
               <Link to={"/"}>Main Page</Link>
             </li>
             <li>
-              <Link to={"/theme"}>Theme of quiz</Link>
+              <Link to={"/themes"}>Theme of quiz</Link>
             </li>
             <li>
               <Link to={"/login"}>Login</Link>
